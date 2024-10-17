@@ -1,0 +1,100 @@
+# Task 3: Sample Queries and Mutations
+
+ Fetch all products:
+query {
+    products {
+        id
+        name
+        price
+        quantity
+        category
+
+    }
+}
+
+ Add a new product:
+mutation {
+    
+    createProduct(productData: {
+        name: "Chocolate Cake",
+        price: 15.99,
+        quantity: 10,
+        category: "Cake"
+    }) {
+      product {
+          id
+          name
+          price
+          quantity
+          category
+     }
+
+    }
+}
+
+
+
+    
+query {
+    products {
+        id
+        name
+        price
+        quantity
+        category
+
+    }
+}
+
+# Add a new product:
+mutation {
+    
+    createProduct(productData: {
+        name: "Chocolate Cake",
+        price: 15.99,
+        quantity: 10,
+        category: "Cake"
+    }) {
+      product {
+          id
+          name
+          price
+          quantity
+          category
+     }
+
+    }
+}
+
+Update a product:
+mutation {
+    updateProduct(id: 1, productData: {
+        name: "Vanilla Cake",
+        price: 18.99,
+        quantity: 7,
+        category: "Cakes"
+    }) {
+      product {
+        id
+        name
+        price
+        quantity
+        category
+
+      }
+    
+    }
+}
+
+Delete a product:
+
+mutation {
+    deleteProduct(id: 1) {
+        ok
+    }
+}
+
+ 
+
+
+    
